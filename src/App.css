@@ -1,9 +1,18 @@
 body{
   background-color: black !important;
-  
+  background-image: url("/star-wars-space-audio-feedback-album-on-imgur-star-wars-space-battle-png-2727_1679.png");
+  object-fit: contain; 
 }
+
 #sidebar a{
-  color: antiquewhite !important;
+  color: rgb(204, 201, 54) !important;
+  text-decoration: underline;
+}
+
+#sidebar{
+  width: 100%;
+  background-color: black;
+  font-family: 'Orbitron', sans-serif !important;
 }
 
 .card{
@@ -13,4 +22,26 @@ body{
 
 h6{
   display: inline-block;
+}
+
+img{
+  display: inline;
+}
+
+nav{
+  background-color: black !important;
+}
+
+.card-header{
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: underline;
+}
+
+#home_body{
+  color:white;
+  text-align: center;
+}
+
+.card-header > a{
+color: rgb(204, 201, 54) !important;
 }

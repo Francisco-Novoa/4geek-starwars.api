@@ -1,25 +1,15 @@
 import React from "react"
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" width="75" height="50" alt="STARWARS" />
-            </a>
-            <ul className="navbar-nav">
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                </li>
-            </ul>
+        <nav className="navbar navbar-expand-lg navbar-dark">
+            <Link to="/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" width="250" height="150" alt="STARWARS" />
+            </Link>
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
+                    <a className="nav-link" target="blank" href="https://github.com/Francisco-Novoa">Github</a>
                 </li>
 
                 <li className="nav-item">

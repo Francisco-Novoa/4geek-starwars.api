@@ -2,7 +2,12 @@ const getState = ({getStore,getActions,setStore}) =>{
     return{
         store:{
             films:null,
-            vehicles:null
+            vehicles:null,
+            starship:null,
+            people:null,
+            planets:null,
+            species:null,
+            current:null
         },
         actions:{
             getFilms:url=>{
@@ -33,6 +38,91 @@ const getState = ({getStore,getActions,setStore}) =>{
                 .then(data=>{
                     setStore({
                         vehicles:data
+                    });
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },
+            getStarship:url=>{
+                fetch(url,{
+                    method: "GET",
+                    headers:{
+                        "Content-Type":"aplication/json"
+                    }
+                })
+                .then(resp=>resp.json())
+                .then(data=>{
+                    setStore({
+                        starship:data
+                    });
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },
+            getPeople:url=>{
+                fetch(url,{
+                    method: "GET",
+                    headers:{
+                        "Content-Type":"aplication/json"
+                    }
+                })
+                .then(resp=>resp.json())
+                .then(data=>{
+                    setStore({
+                        people:data
+                    });
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },
+            getPlanet:url=>{
+                fetch(url,{
+                    method: "GET",
+                    headers:{
+                        "Content-Type":"aplication/json"
+                    }
+                })
+                .then(resp=>resp.json())
+                .then(data=>{
+                    setStore({
+                        planets:data
+                    });
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },
+            getSpecies:url=>{
+                fetch(url,{
+                    method: "GET",
+                    headers:{
+                        "Content-Type":"aplication/json"
+                    }
+                })
+                .then(resp=>resp.json())
+                .then(data=>{
+                    setStore({
+                        species:data
+                    });
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },
+            getCurrent:url=>{
+                fetch(url,{
+                    method: "GET",
+                    headers:{
+                        "Content-Type":"aplication/json"
+                    }
+                })
+                .then(resp=>resp.json())
+                .then(data=>{
+                    setStore({
+                        current:data
                     });
                 })
                 .catch(error=>{
