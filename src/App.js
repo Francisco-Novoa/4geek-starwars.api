@@ -14,6 +14,11 @@ import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Home from './components/home';
 import DisplayFilm  from "./components/filmside/displayfilm"
+import DisplayPeople  from "./components/peopleside/displaypeople"
+import DisplayPlanet  from "./components/planetside/displayplanet"
+import DisplayStarships  from "./components/starshipside/displaystarship"
+import DisplayVehicle   from "./components/vehiclesside/displayvehicle"
+import DisplaySpecies from "./components/speciesside/displayspecies"
 
 function App() {
   return (
@@ -30,7 +35,12 @@ function App() {
             <Route exact path="/planets" component={ContentPlanet} />
             <Route exact path="/films" component={ContentFilms} />
             <Route exact path="/species" component={ContentSpecies} />
-            <Route exact path="/filmdisplay" component={DisplayFilm} />
+            <Route exact path="/displayfilm" component={DisplayFilm} />
+            <Route exact path="/displaypeople" component={DisplayPeople} />
+            <Route exact path="/displayplanet" component={DisplayPlanet} />
+            <Route exact path="/displaystarship" component={DisplayStarships} />
+            <Route exact path="/displayvehicle" component={DisplayVehicle} />
+            <Route exact path="/displayspecie" component={DisplaySpecies} />
           </Switch>
         </div>
       </div>

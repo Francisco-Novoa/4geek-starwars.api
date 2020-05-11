@@ -3,7 +3,7 @@ import CardFilm from "./cardfilm"
 import { ApiContext } from "../../store/appContext"
 
 export default function ContentFilms() {
-  const { store, actions } = useContext(ApiContext)
+  const { store} = useContext(ApiContext)
   return (
     <div className="col-10">
       <div className="container-fluid">
@@ -12,12 +12,7 @@ export default function ContentFilms() {
             store.films.results.map((film, i) => {
               return (
                 <div className="col-4 p-0 m-0" key={film.episode_id}>
-                  <CardFilm title={film.title}
-                    crawl={film.opening_crawl}
-                    number={film.episode_id}
-                    url={`Films/episode${film.episode_id}.jpg`}
-                    api={film.url}
-                  />
+                  <CardFilm film={film}/>
                 </div>
               )
             })
@@ -26,6 +21,11 @@ export default function ContentFilms() {
         </div>
           }
         </div>
+        <div className="row">
+                <div className="col-12" style={{height:"200px"}}>
+                    
+                </div>
+            </div>
       </div>
     </div>
   )

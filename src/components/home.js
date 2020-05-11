@@ -20,12 +20,19 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-2"> <a href="https://swapi.co/">    
-                        <img style={{ borderRadius: "150px" }} className="mx-2 mt-4" src="/SWAPI.png" width="150px" height="150px" alt="SWAPI" /> </a></div>
-                        <div className="col-2"> 
-                         <a href="https://getbootstrap.com/"> <img style={{ borderRadius: "150px"}} className="mx-2 mt-4" src="/bootstrap.png" width="150px" height="150px" alt="Bootstrap" /></a> </div>
-                        <div className="col-2"> 
-                         <a href="https://es.reactjs.org/docs/getting-started.html"> <img style={{ borderRadius: "150px" }} className="mx-2 mt-4" src="/react.png" width="150px" height="150px" alt="Bootstrap" /></a>
+                        <div className="col-2">
+                            <a target="blank" href="https://swapi.co/">
+                                <img style={{ borderRadius: "150px" }} className="mx-2 mt-4" src="/SWAPI.png" width="150px" height="150px" alt="SWAPI" />
+                            </a></div>
+                        <div className="col-2">
+                            <a target="blank" href="https://getbootstrap.com/">
+                                <img style={{ borderRadius: "150px" }} className="mx-2 mt-4" src="/bootstrap.png" width="150px" height="150px" alt="Bootstrap" />
+                            </a>
+                        </div>
+                        <div className="col-2">
+                            <a target="blank" href="https://es.reactjs.org/docs/getting-started.html">
+                                <img style={{ borderRadius: "150px" }} className="mx-2 mt-4" src="/react.png" width="150px" height="150px" alt="Bootstrap" />
+                            </a>
                         </div>
                     </div>
                 </div>

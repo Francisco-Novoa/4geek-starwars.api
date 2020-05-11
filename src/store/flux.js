@@ -7,14 +7,23 @@ const getState = ({getStore,getActions,setStore}) =>{
             people:null,
             planets:null,
             species:null,
-            current:null
+            current:null,
+            afilms: [],
+            aspecies: [],
+            avehicles: [],
+            astarships: [],
+            apeople: [],
+            acharacters: [],
+            aplanets: [],
+            aresidents: [],
+            ahomeworld: ""
         },
         actions:{
             getFilms:url=>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -31,7 +40,7 @@ const getState = ({getStore,getActions,setStore}) =>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -44,28 +53,29 @@ const getState = ({getStore,getActions,setStore}) =>{
                     console.log(error)
                 })
             },
-            getStarship:url=>{
-                fetch(url,{
-                    method: "GET",
-                    headers:{
-                        "Content-Type":"aplication/json"
-                    }
-                })
-                .then(resp=>resp.json())
-                .then(data=>{
+            getStarship: async url => {
+                console.log(url)
+                try {
+                    const all = await fetch(url, {
+                        method: "GET",
+                        headers: { "Content-Type": "application/json" }
+                    })
+                    console.log(all)
+                    const data = await all.json()
+                    console.log(all)
                     setStore({
                         starship:data
-                    });
-                })
-                .catch(error=>{
+                    })
+                }
+                catch (error) {
                     console.log(error)
-                })
+                }
             },
             getPeople:url=>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -82,7 +92,7 @@ const getState = ({getStore,getActions,setStore}) =>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -99,7 +109,7 @@ const getState = ({getStore,getActions,setStore}) =>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -116,7 +126,7 @@ const getState = ({getStore,getActions,setStore}) =>{
                 fetch(url,{
                     method: "GET",
                     headers:{
-                        "Content-Type":"aplication/json"
+                        "Content-Type":"application/json"
                     }
                 })
                 .then(resp=>resp.json())
@@ -128,6 +138,11 @@ const getState = ({getStore,getActions,setStore}) =>{
                 .catch(error=>{
                     console.log(error)
                 })
+            },
+            setCurrent:(data)=>{
+                setStore({
+                    current:data
+                });
             },
         }
     }

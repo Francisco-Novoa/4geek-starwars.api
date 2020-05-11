@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { ApiContext } from "../../store/appContext"
 
+
 export default function DisplayFilms() {
     const { store,} = useContext(ApiContext)
     return (
@@ -12,17 +13,18 @@ export default function DisplayFilms() {
                             <div className="col-7">     
                                 <div className="list-group">
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item bg-secondary"> <h4>Episode {store.current.episode_id}</h4> </li>
-                                        <li className="list-group-item">  <h3>{store.current.title}</h3> </li>
-                                        <li className="list-group-item"> Director: {store.current.director} </li>
-                                        <li className="list-group-item">Producer: {store.current.producer}</li>
-                                        <li className="list-group-item">Release Date {store.current.release_date}</li>
-                                        <li className="list-group-item"> <h3>Opening Crawl:</h3>  {store.current.opening_crawl} </li>
+                                        <li className="list-group-item bg-secondary"> <h3> {store.current.name}</h3> </li>
+                                        <li className="list-group-item"> <h5>Heigh: {store.current.height}</h5>  </li>
+                                        <li className="list-group-item"> <h5>Weight: {store.current.mass}</h5> </li>
+                                        <li className="list-group-item"> <h5>Hair Color: {store.current.hair_color}</h5>  </li>
+                                        <li className="list-group-item"> <h5>Skin Color: {store.current.skin_color}</h5>   </li>
+                                        <li className="list-group-item"> <h5>Birth Year: {store.current.birth_year} </h5>   </li>
+                                        <li className="list-group-item"> <h5>Gender: {store.current.gender}</h5>   </li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-4">
-                                <img className="mb-3" src={`/Films/episode${store.current.episode_id}.jpg`} width="450px" height="650px" alt={store.current.title} />
+                                <img className="mb-3" src={`/People/${store.current.name}.jpg`} width="450px" height="650px" alt={store.current.name} />
                             </div>
                         </div>
                     </div>
