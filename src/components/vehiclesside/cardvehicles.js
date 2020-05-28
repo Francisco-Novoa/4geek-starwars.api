@@ -18,7 +18,7 @@ export default function CardVehicles(props) {
                     <li key="2" className="list-group-item"><h6>Manufacturer: {props.vehicle.manufacturer}</h6> </li>
                     <li key="3" className="list-group-item"><h6>Max speed: {props.vehicle.speed}km/h</h6>  </li>
                     <li key="4" className="list-group-item"><h6>Cargo capacity: {props.vehicle.cargo} tons</h6> </li>
-                    <li key="5" className="list-group-item"><h6>Cost in credits {props.vehicle.cost}</h6> </li>
+                    <li key="5" className="list-group-item"><h6>Cost in credits {props.vehicle.cost_in_credits}</h6> </li>
                 </ul>
             </div>
         </div>

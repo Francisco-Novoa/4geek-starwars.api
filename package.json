@@ -2,6 +2,8 @@
   "name": "26-proy-sw",
   "version": "0.1.0",
   "private": true,
+  "engine":{"node":"12.16.1",
+    "npm":"6.13.4" },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@testing-library/jest-dom": "^4.2.4",
